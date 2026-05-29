@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dileepa Ranathunga Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+    <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="eXQIqagXBE5ETTSh4acfb";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</head>
+<!-- BULLETPROOF TYPEWRITER SCRIPT -->
+    <script>
+        (function() {
+            var words = ["Software Engineering Student", "Web Developer", "AI Enthusiast"];
+            var wordIndex = 0;
+            var charIndex = 0;
+            var isDeleting = false;
+
+            function typeEffect() {
+                var el = document.getElementById('typewriter');
+                if (!el) return; // Stop if element is missing
+
+                var currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                    el.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    el.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                var speed = isDeleting ? 40 : 80;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    speed = 2000; // Pause at full word
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    speed = 400; // Pause before next word
+                }
+
+                setTimeout(typeEffect, speed);
+            }
+
+            // Force run 2 seconds after page load to clear the intro splash screen
+            window.addEventListener('load', function() {
+                setTimeout(typeEffect, 2000);
+            });
+        })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<body>
+    <!-- SPLASH SCREEN INTRO -->
+    <div id="splash-screen">
+        <h1 id="splash-text" class="main-title gradient-text">Dileepa Ranathunga</h1>
+        <video id="splash-logo" muted playsinline>
+            <source src="intro-logo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- BULLETPROOF TIMER SCRIPT -->
+    <script>
+        // Phase 1: At 1.5 seconds, hide text and play video
+        setTimeout(function() {
+            document.getElementById('splash-text').style.opacity = '0';
+            var logo = document.getElementById('splash-logo');
+            logo.style.opacity = '1';
+            // Play video and ignore any browser autoplay errors
+            var playPromise = logo.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function(error) { console.log("Video skipped"); });
+            }
+        }, 1500);
+
+        // Phase 2: At 4.5 seconds, hide the entire splash screen
+        setTimeout(function() {
+            var splash = document.getElementById('splash-screen');
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            
+            // Delete it from the page so you can click your buttons
+            setTimeout(function() {
+                splash.style.display = 'none';
+            }, 1000);
+        }, 4500);
+    </script>
+    <!-- CYBERPUNK ANIMATED BACKGROUND -->
+    <div id="scene">
+        <!-- Ambient glow orbs -->
+        <div class="glow-orb" style="width:40vw;height:25vh;background:#7700aa;left:25%;top:10%;opacity:0.3;"></div>
+        <div class="glow-orb" style="width:28vw;height:20vh;background:#ff2060;left:60%;top:20%;animation-delay:2s;opacity:0.2;"></div>
+        <div class="glow-orb" style="width:32vw;height:14vh;background:#0066ff;left:5%;top:45%;animation-delay:1s;opacity:0.15;"></div>
+        <div class="glow-orb" style="width:25vw;height:16vh;background:#00ccaa;left:70%;top:50%;animation-delay:3s;opacity:0.12;"></div>
+
+        <!-- Far background skyline -->
+        <div class="sky-bldg" style="left:0;bottom:28vh;width:14vw;height:28vh;">
+            <div class="bldg-win" style="top:15%;left:15%;"></div><div class="bldg-win" style="top:15%;left:30%;"></div>
+            <div class="bldg-win" style="top:30%;left:20%;opacity:0.4;"></div><div class="bldg-win" style="top:45%;left:25%;"></div>
+            <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#cc44ff;box-shadow:0 0 12px #cc44ff;opacity:0.7;"></div>
+        </div>
+        <div class="sky-bldg" style="left:13vw;bottom:28vh;width:9vw;height:22vh;">
+            <div class="bldg-win" style="top:12%;left:20%;"></div><div class="bldg-win" style="top:30%;left:30%;"></div>
+        </div>
+        <div class="sky-bldg" style="right:0;bottom:28vh;width:15vw;height:30vh;">
+            <div class="bldg-win" style="top:18%;right:12%;"></div><div class="bldg-win" style="top:18%;right:25%;"></div>
+            <div class="bldg-win" style="top:35%;right:15%;"></div><div class="bldg-win" style="top:52%;right:12%;opacity:0.4;"></div>
+            <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:#00ccff;box-shadow:0 0 12px #00ccff;opacity:0.6;"></div>
+        </div>
+        <div class="sky-bldg" style="right:14vw;bottom:28vh;width:10vw;height:24vh;">
+            <div class="bldg-win" style="top:22%;right:15%;"></div><div class="bldg-win" style="top:42%;right:20%;"></div>
+        </div>
+
+        <!-- Side buildings -->
+        <div class="bldg" style="left:0;width:16vw;height:55vh;">
+            <div class="bldg-win" style="top:8%;left:10%;"></div><div class="bldg-win" style="top:8%;left:18%;"></div><div class="bldg-win" style="top:8%;left:26%;"></div>
+            <div class="bldg-win" style="top:16%;left:12%;opacity:0.5;"></div><div class="bldg-win" style="top:16%;left:22%;"></div>
+            <div class="bldg-win" style="top:24%;left:10%;"></div><div class="bldg-win" style="top:24%;left:20%;opacity:0.3;"></div>
+            <div class="bldg-win" style="top:32%;left:8%;"></div><div class="bldg-win" style="top:32%;left:18%;"></div><div class="bldg-win" style="top:32%;left:28%;"></div>
+            <div class="bldg-win" style="top:44%;left:12%;opacity:0.4;"></div><div class="bldg-win" style="top:56%;left:16%;"></div>
+            <div class="bldg-win" style="top:64%;left:20%;"></div><div class="bldg-win" style="top:64%;left:30%;opacity:0.6;"></div>
+            <div style="position:absolute;bottom:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,transparent,#ff2d7866,transparent);"></div>
+        </div>
+        <div class="bldg" style="right:0;width:17vw;height:58vh;">
+            <div class="bldg-win" style="top:7%;right:10%;"></div><div class="bldg-win" style="top:7%;right:22%;"></div>
+            <div class="bldg-win" style="top:18%;right:14%;"></div><div class="bldg-win" style="top:18%;right:26%;opacity:0.5;"></div>
+            <div class="bldg-win" style="top:28%;right:10%;opacity:0.3;"></div><div class="bldg-win" style="top:28%;right:20%;"></div>
+            <div class="bldg-win" style="top:38%;right:15%;"></div><div class="bldg-win" style="top:50%;right:18%;"></div>
+            <div class="bldg-win" style="top:58%;right:10%;"></div><div class="bldg-win" style="top:58%;right:24%;opacity:0.6;"></div>
+            <div style="position:absolute;bottom:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,transparent,#00ffea33,transparent);"></div>
+        </div>
+
+        <!-- Overhead tech bar -->
+        <div class="overhead-bar" style="left:0;top:18%;width:55%;height:clamp(20px,3.5vh,35px);z-index:5;">
+            <div style="position:absolute;top:15%;left:2%;width:clamp(28px,4vw,48px);height:70%;border:1.5px solid #cc44ff;border-radius:50%;box-shadow:0 0 8px #cc44ff;display:flex;align-items:center;justify-content:center;">
+                <div style="width:35%;height:35%;background:#cc44ff;border-radius:50%;box-shadow:0 0 8px #cc44ff;animation:pulse 1.5s infinite;"></div>
+            </div>
+            <div style="position:absolute;top:25%;left:10%;display:flex;gap:8px;">
+                <div style="width:10px;height:10px;border:1px solid #ff2d78;border-radius:50%;box-shadow:0 0 5px #ff2d78;animation:pulse 2s infinite;"></div>
+                <div style="width:10px;height:10px;border:1px solid #00ffea;border-radius:50%;box-shadow:0 0 5px #00ffea;animation:pulse 2.5s infinite;animation-delay:0.8s;"></div>
+                <div style="width:10px;height:10px;border:1px solid #ffaa00;border-radius:50%;box-shadow:0 0 5px #ffaa00;animation:pulse 2s infinite;animation-delay:1.4s;"></div>
+            </div>
+            <div style="position:absolute;right:2%;top:20%;font-size:clamp(7px,1vw,11px);color:#cc44ff;letter-spacing:3px;text-shadow:0 0 6px #cc44ff;">◈ SYS.07</div>
+        </div>
+
+        <!-- Wires -->
+        <div class="wire" style="left:8%;top:20%;width:38%;transform:rotate(2.5deg);"></div>
+        <div class="wire" style="left:12%;top:23%;width:30%;transform:rotate(-1.5deg);"></div>
+        <div class="wire" style="right:2%;top:21%;width:42%;transform:rotate(2deg);"></div>
+        <div class="wire" style="right:8%;top:25%;width:36%;transform:rotate(-2deg);"></div>
+
+        <!-- Left panel signs -->
+        <div class="panel-sign" style="left:1%;top:28%;z-index:6;">
+            <span style="color:#00ccff;text-shadow:0 0 10px #00ccff;">宿</span>
+            <span style="color:#ff2d78;text-shadow:0 0 10px #ff2d78;">业</span>
+            <span style="color:#00ccff;text-shadow:0 0 6px #00ccff;font-size:13px;">刀</span>
+            <span style="color:#ffaa00;text-shadow:0 0 6px #ffaa00;font-size:13px;">客</span>
+        </div>
+
+        <div class="sign sign-cyan"  style="left:1%;top:38%;z-index:6;">目 SYN</div>
+        <div class="sign sign-pink"  style="left:1%;top:44%;z-index:6;">刀 NET</div>
+        <div class="sign sign-amber" style="left:1%;top:50%;z-index:6;">客 BAR</div>
+
+        <!-- Right panel signs -->
+        <div class="panel-sign" style="right:1%;top:22%;z-index:6;border-color:#ff2d78;box-shadow:0 0 14px #ff2d7844;">
+            <span style="color:#ff2d78;text-shadow:0 0 12px #ff2d78;font-size:18px;">欢</span>
+            <span style="color:#cc44ff;text-shadow:0 0 10px #cc44ff;font-size:15px;">◎</span>
+        </div>
+        <div class="sign sign-purple" style="right:1%;top:34%;z-index:6;">◈ C-17</div>
+        <div class="sign sign-cyan"   style="right:1%;top:40%;z-index:6;animation-delay:0.7s;">◎ NET</div>
+
+        <!-- Circular sensor right -->
+        <div style="position:absolute;right:1.5%;top:47%;z-index:6;width:clamp(24px,3.5vw,38px);height:clamp(24px,3.5vw,38px);border:2px solid #ff2d78;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 14px #ff2d7866;background:#08000e;">
+            <div style="width:50%;height:50%;border-radius:50%;background:transparent;border:1.5px solid #ff2d78;display:flex;align-items:center;justify-content:center;">
+                <div style="width:40%;height:40%;border-radius:50%;background:#ff2d78;box-shadow:0 0 8px #ff2d78;animation:pulse 1.8s infinite;"></div>
+            </div>
+        </div>
+
+        <!-- Figures -->
+        <div class="figure" style="left:calc(50% - 10vw);">
+            <div class="fig-head"></div>
+            <div class="fig-body" style="height:clamp(28px,5vh,44px);">
+                <div class="fig-stripe" style="background:#ffaa00;box-shadow:0 0 5px #ffaa00;"></div>
+                <div class="fig-pack" style="border-color:#ff4444;box-shadow:0 0 5px #ff4444;"></div>
+            </div>
+        </div>
+        <div class="figure" style="right:calc(50% - 15vw);">
+            <div class="fig-head"></div>
+            <div class="fig-body" style="height:clamp(22px,4vh,36px);">
+                <div class="fig-stripe" style="background:#cc44ff;box-shadow:0 0 5px #cc44ff;"></div>
+                <div class="fig-pack" style="border-color:#00ccff;box-shadow:0 0 4px #00ccff;"></div>
+            </div>
+        </div>
+
+        <!-- Car -->
+        <div class="car" style="left:calc(50% - 5vw);width:10vw;" id="car1">
+            <div class="car-headlight" style="left:4px;"></div>
+            <div class="car-tail" style="right:4px;"></div>
+            <div style="position:absolute;bottom:0;left:0;width:100%;height:30%;background:#09001a;border-radius:0 0 3px 3px;"></div>
+        </div>
+
+        <!-- Ground -->
+        <div class="street"></div>
+        <div class="road-line"></div>
+        <div class="road-reflect"></div>
+        <div style="position:absolute;bottom:13.5vh;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent 0%,#cc44ffaa 50%,transparent 100%);"></div>
+        <div style="position:absolute;bottom:13vh;left:calc(50% - 1px);width:2px;height:8vh;background:linear-gradient(0deg,#ff880044,#ff8800aa,transparent);"></div>
+
+        <!-- Rain canvas -->
+        <canvas id="rain"></canvas>
+
+        <!-- THIS CREATES THE DARKER OVERLAY EFFECT -->
+        <div class="bg-darken"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="glass-panel">
+        <div class="nav-container">
+           <div class="logo">
+    <img src="2.png" alt="Dileepa Logo" style="height: 60px; width: auto;">
+</div>
+            
+            <div class="desktop-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="ghost-btn">Contact Me</a>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="ghost-btn-mobile">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-earth">
+        <!-- Glowing Background Effects -->
+        <div class="glow glow-blue"></div>
+        <div class="glow glow-purple"></div>
+
+        <div class="hero-container">
+            
+            <!-- Left Side: Text -->
+            <div class="hero-text parallax" data-speed="0.3">
+                <h2 class="greeting">Hi, I'm</h2>
+                <h1 class="main-title">
+                    Dileepa <br>
+                    <span class="gradient-text" id="typewriter"></span><span class="cursor">|</span>
+                </h1>
+                <p class="description">
+                    I specialize in building modern, responsive web applications and AI-powered solutions. Passionate about exploring new technologies and writing clean, efficient code.
+                </p>
+                <div class="button-group">
+                    <a href="#projects" class="btn btn-primary">View Projects &rarr;</a>
+                    <a href="cv.pdf" download class="btn btn-glass">Download CV &darr;</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Image (Asymmetrical) -->
+            <div class="hero-image parallax" data-speed="-0.2">
+                <div class="glass-card rotated">
+    <!-- Your actual profile image -->
+    <img src="3.png" alt="Dileepa Ranathunga" class="profile-img">
+    
+    <div class="floating-badge glass-panel">
+                        <div class="status-dot"></div>
+                        <span>Available for Work</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!-- ABOUT SECTION -->
+    <section id="about" class="page-section">
+        <div class="section-container">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="glass-card about-card">
+                <p>I am an undergraduate student pursuing a Bachelor of Science (Honours) degree in Software Engineering at SLTC Research University. My passion lies in building modern web applications and exploring AI-powered software solutions.</p>
+                <p>From configuring Linux servers to developing complex data structures, I love tackling technical challenges. I am currently learning new technologies and seeking freelance or remote opportunities to apply my skills in real-world environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="page-section bg-earth-800">
+        <div class="section-container">
+            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-card">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, React, Tailwind CSS</p>
+                </div>
+                <div class="glass-card skill-card">
+                    <h3>Backend & Languages</h3>
+                    <p>Java, Python, C++, Node.js, Express.js</p>
+                </div>
+                <div class="glass-card skill-card">
+                    <h3>Database & Tools</h3>
+                    <p>MySQL, MongoDB, Git, Linux (Ubuntu), VS Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="page-section">
+        <div class="section-container">
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="glass-card project-card">
+                    <div class="project-content">
+                        <h3>Smart City Route Planner</h3>
+                        <p>A complex routing system implementing LocationBST and Graph data structures to optimize urban navigation pathways.</p>
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>Data Structures</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/cit-24-02-0046-Dileepa/CCS2300_DataStructures_SmartCityRoutePlanner.git" class="btn btn-glass">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card project-card">
+                    <div class="project-content">
+                        <h3>Real-Time Chat Room</h3>
+                        <p>A low-latency, real-time messaging system built using asynchronous communication protocols.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Web-Sockets</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-glass">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card project-card">
+                    <div class="project-content">
+                        <h3>Pharmacy Management System</h3>
+                        <p>A comprehensive inventory and management dashboard for modern pharmacy operations.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-glass">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- CONTACT SECTION -->
+    <section id="contact" class="page-section bg-earth-800">
+        <div class="section-container text-center">
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="description mx-auto">I am currently open for freelance opportunities and internships. Send me a message below!</p>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container glass-card">
+                <!-- We will add the Formspree link to the 'action' attribute in Step 3 -->
+                <form action="https://formspree.io/f/xykvowwa" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/dileepa-ranathunga-2b5586330/?skipRedirect=true" target="_blank" class="btn btn-glass">LinkedIn</a>
+                <a href="https://github.com/cit-24-02-0046-Dileepa" target="_blank" class="btn btn-glass">GitHub</a>
+            </div>
+        </div>
+    </section>
